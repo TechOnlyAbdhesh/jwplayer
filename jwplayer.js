@@ -97,7 +97,7 @@ playerInstance.on("ready", function () {
 // Ensure the player has loaded before adding the button
     // Add custom button to toggle aspect ratio
     playerInstance.addButton(
-        "content://media/external/downloads/1294", // URL to an icon
+        "https://raw.githubusercontent.com/TechOnlyAbdhesh/jwplayer/refs/heads/main/8420791.png", // URL to an icon
         "Toggle Aspect Ratio", // Tooltip
         function() {
             currentStretchModeIndex = (currentStretchModeIndex + 1) % stretchModes.length;

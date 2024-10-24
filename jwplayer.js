@@ -33,7 +33,7 @@ const playerInstance = jwplayer("player").setup({
             image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/sun.png",
             sources: [
                 {
-                    file: "h",
+                    file: "https://example.com/1080p/file.mp4",
                     type: "mp4",
                     label: "1080p",
                     default: true,
@@ -43,6 +43,11 @@ const playerInstance = jwplayer("player").setup({
                             "key": "06c1bbfe152ea7d17ed3f7bf6659ffa2" 
                         } 
                     }  */
+                },
+                {
+                    file: "https://example.com/720p/file.mpd",
+                    type: "dash",
+                    label: "720p"
                 }
             ]
         }
@@ -97,7 +102,7 @@ playerInstance.on("ready", function () {
 // Ensure the player has loaded before adding the button
     // Add custom button to toggle aspect ratio
     playerInstance.addButton(
-        "content://media/external/downloads/1294", // URL to an icon
+        "https://raw.githubusercontent.com/TechOnlyAbdhesh/jwplayer/refs/heads/main/8420791.png", // URL to an icon
         "Toggle Aspect Ratio", // Tooltip
         function() {
             currentStretchModeIndex = (currentStretchModeIndex + 1) % stretchModes.length;
